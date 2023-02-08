@@ -1,122 +1,117 @@
 
-<div align="center">
-  <h1>BOND</h1>
-  <h3>당신의 취미도 BOND로 시작하세요.</h3>
+## 1. 제작 기간 & 참여 인원
+- 2022년 10월 18일 ~ 2022년 12월 10일
+- 4인 팀 프로젝트 (팀장)
 
 <br>
-  <h3>✍️Description✍️</h3>
-  BOND는 같은 관심사를 가진 수많은 사람들이 모여 모임을 만들고 <br>
-  모임에 글과 이미지를 공유하고 그에 대한 생각과 정보를 나누며 서로 이야기를 나누는 공간, <br>
-  일정 기능을 통해 모임의 정모를 정할 수 있는 공간입니다. 
+
+## 2. 사용 기술
+
+#### `Back-end`
+
+  - Java 11
+  - Spring 3.9.18
+  - Maven
+  - Oracle 21C
+  - Apache Tomcat 9.0
+  - Spring Security
+  - Mybatis
+#### `Front-end`
+  - HTML/CSS
+  - Javascript
+
+<br>
+
+## 3. ERD 설계
+<img src="https://user-images.githubusercontent.com/110653581/206644146-b63977b9-e8ad-45f6-9d72-66abfcdd1c95.png"/>
+
+ERD 주소 : https://www.erdcloud.com/d/rH52AGzEpuXjv7vir
+
+## 4. 핵심 기능
+
+<details>
+<summary><b>핵심 기능 설명 펼치기</b></summary>
+<div markdown="1">
+
+### 4.1. 모임생성
+
+<img width="50%" alt="스크린샷 2022-12-13 오전 1 49 14" src="https://user-images.githubusercontent.com/110653575/217594377-35cd5e0d-4773-42ce-8eaf-10c7782f073c.png">
+
+<br>
+
+- 항목 : 모임명, 이미지(선택), 카테고리, 공개여부
+  * 필수 항목 미기재 시 유효성 검사로 생성 불가
+- 모임 생성 시 해당 회원을 모임장으로 상태 변경
+- 코드확인
+  * [Controller](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/java/kh/semi/project/bond/controller/BondController.java#L49)
+  * [Service](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/java/kh/semi/project/bond/model/service/BondServiceImpl.java#L32)
 	
-  <br>
-  <br>
+<br>
+<br>
+
+### 4.2. 가입한 모임 페이지(게시글)
+
+<img width="50%" alt="스크린샷 2023-02-09 오전 1 45 14" src="https://user-images.githubusercontent.com/110653575/217595607-92ed6d7b-7591-4975-a4df-dc4841da668d.png">
+
+<br>
+
+- 게시글 전체 조회
+  * 무한스크롤을 통한 전체 글 리스트 조회
+  * 클릭 시 게시글 상세조회 모달창 생성
 	
-  BenchMarking : 네이버 밴드, 소모임
-
-<br>
-
------------------------
-<br>
-<div align="center">
-  <h3>📚Tech Stack📚</h3>
-  
-  <h5>🔥Platforms&Languge🔥</h5>
-  <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=Spring&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Java&logoColor=white" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white" /><br>
-  <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white" />
-  <img src="https://img.shields.io/badge/Apache-D22128?style=flat&logo=Apache&logoColor=white" />
-  <img src="https://img.shields.io/badge/Apache Maven-C71A36?style=flat&logo=Apache Maven&logoColor=white" />
-  <img src="https://img.shields.io/badge/Oracle-F80000?style=flat&logo=Oracle&logoColor=white" />
-  
-  <h5>⚙️Tools⚙️</h5>
-  
-  <img src="https://img.shields.io/badge/Eclipse IDE-2C2255?style=flat&logo=Eclipse IDE&logoColor=white" />
-  <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=Visual Studio Code&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white" />
-  <img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=flat&logo=Apache Tomcat&logoColor=white" />
-</div>
-
-<br>
-<br>
------------------------
-</div>
-
-<div align="center">
-  <br>
+- 코드확인
+  * [Controller](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/java/kh/semi/project/bond/controller/BondController.java#L102)
+  * [JS](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/webapp/resources/js/bond/bond.js#L58)
+  * [Mapper](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/resources/mappers/post-mapper.xml#L72)
 	
-  <h3>📜ERD📜</h4>
-  <img src="https://user-images.githubusercontent.com/110653581/206644146-b63977b9-e8ad-45f6-9d72-66abfcdd1c95.png"/>
-  ERD 주소 : https://www.erdcloud.com/d/rH52AGzEpuXjv7vir
-	
-  <br>
-  <br>
-	
-  <br>
-  <br>
-
------------------------
-</div>
-
-
-<div>
 <br>
 <br>
-  <h3 align="center">📃내가 구현한 화면 / 기능📃</h4>
-  <br>
-  <br>
-  
-  <h4>1. 첫 메인화면</h5>
-  <br>
-  <img width=100% src="https://user-images.githubusercontent.com/110653581/206646251-f4e87346-3f36-45e1-b404-cee5a80edd97.PNG"/>
-  <br>
-  <br>
 
-  <h4>2. 로그인 후 첫 화면</h5>
-  <br>
-  <img width=100% src="https://user-images.githubusercontent.com/110653581/206650370-aec974e0-5b94-4706-8138-650674ecd61b.PNG"/>
-  <h5>	1) 만들기 버튼 클릭 시 새 모임 만들기 페이지로 이동 </h5>
-  <h5>  2) 내 모임 페이지에는 사용자가 가입한 모임 리스트만 출력됨 </h5>
-  <br>
-  <br>
-  
-  <h4>3. 가입한 모임 페이지</h5>
-  <br>
-  <img width=100% src="https://user-images.githubusercontent.com/110653581/206651639-89732b97-41f3-4ad0-a287-48cdac8fd38a.PNG"/>
+### 4.3. 게시글 작성 및 수정
+<img width="50%" alt="스크린샷 2022-12-13 오전 1 51 54" src="https://user-images.githubusercontent.com/110653575/217594987-c9046f6f-f5aa-46ed-a85f-2d31ac896fca.png">
 
-  <h5>	1) summernote api를 사용한 게시글 작성 / 수정</h5>
+<br>
 
-  <h5>  2) 게시물은 무한 스크롤 기능을 이용하여 스크롤 시 마지막 게시물까지 출력됨</h5>
-
-  <br>
-  <br>
-  
-  <h4>4. 사진첩 페이지</h4>
-  <br>
-  <img width=100% src="https://user-images.githubusercontent.com/110653581/206651978-d035a297-1fdc-498b-97a4-0b22b5e3d974.PNG"/>
-  
-  <h5>	1. 사진 업로드 시 최신 순으로 업로드됨</h5>
-  <h5>	2. 클릭 시 이미지 상세 조회</h5>
+- summernote api 를 통한 게시글 작성 및 수정
+- 게시글 수정 시 기존 글 불러오기
+- 이미지 등록
+  * 게시글 내 <img> 태그만 정규표현식으로 추출하여 DB에 저장
+  * scheduler를 통해 서버에 저장된 이미지와 DB에 저장된 이미지 비교하여 미사용 이미지 일정시간마다 삭제
  
-  <br>
-  <br>
+- 코드확인
+  * [Controller](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/java/kh/semi/project/bond/controller/PostController.java#L119)
+  * [작성 Service](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/java/kh/semi/project/bond/model/service/PostServiceImpl.java#L60)
+  * [수정 Service](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/java/kh/semi/project/bond/model/service/PostServiceImpl.java#L116)
+  * [JS](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/webapp/resources/js/bond/bond.js#L278)
+  * [Mapper](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/resources/mappers/post-mapper.xml#L181)
+	
+<br>
+<br>
+
+	
+### 4.4. 댓글 기능
+
+<img width="50%" alt="스크린샷 2022-12-13 오전 2 00 25" src="https://user-images.githubusercontent.com/110653575/217595203-a1e91aad-b251-4326-95c4-de423b7960cd.png">
+
+<br>
+
+- 댓글
+  * 댓글 작성과 답글 작성 가능
+  * 댓글 삭제 시 “삭제 된 댓글입니다”로 내용 수정 후 신고, 수정, 삭제 버튼 모두 사라짐
+- 좋아요, 댓글 수 실시간 반영
+  * 좋아요 클릭, 댓글 등록 시 상세조회와 목록조회 모두 숫자 증가
   
-</div>
+- 코드확인
+  * [Controller](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/java/kh/semi/project/bond/controller/ReplyController.java)
+  * [Mapper](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/resources/mappers/reply-mapper.xml)
+  * [JS](https://github.com/Hyunjae/bondProject/blob/main/Bond/src/main/webapp/resources/js/bond/bond.js#L540)
+
 
 <br>
 <br>
 
------------------------
-<div align="center">
-  <br>
-  <h1>끝.</h1>
-  <h3>감사합니다</h3>
-  <br>
-  <br>
-  <br>
-  <br>
-</div>
 
+</div>
+</details>
+
+</br>
